@@ -1,4 +1,4 @@
-# 1 Работа по Основам информатики и программирования 
+# Task 1
 ## Hello-Students
 
 ### **1 Запуск Linux** 
@@ -20,7 +20,7 @@ mkdir ~/inf/task1
 vim ~/inf/task1/main.c
 ```
 - Вставьте следующий код, заменив `First Last` на ваше имя и фамилию, а `student@cs.petrsu.ru` на ваш адрес электронной почты
-```main.c
+```C
 /**
  * main.c -- программа "Hello, students!"
  *
