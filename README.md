@@ -9,10 +9,10 @@
 7. Прототип компьютерной игры
 
 Ход выполнения:
-- [x] 1. Hello, Students!
-- [x] 2. Нужный этаж
-- [x] 3. Проблема 196
-- [x] 4. Гипотеза Гольдбаха
+- [x] 1. [Hello, Students!](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task1/task1.md)
+- [x] 2. [Нужный этаж](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task2/task2.md)
+- [x] 3. [Проблема 196](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task3/task3.md)
+- [x] 4. [Гипотеза Гольдбаха](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task4/task4.md)
 - [ ] 5. Калькулятор рациональных дробей
 - [ ] 6. Англо-русский словарь
 - [ ] 7. Прототип компьютерной игры
