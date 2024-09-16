@@ -14,5 +14,5 @@
 - [x] 3. [Проблема 196](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task3/task3.md)
 - [x] 4. [Гипотеза Гольдбаха](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task4/task4.md)
 - [X] 5. [Калькулятор рациональных дробей](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task5/task5.md)
-- [ ] 6. Англо-русский словарь
+- [X] 6. [Англо-русский словарь](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task6/task6.md)
 - [ ] 7. Прототип компьютерной игры
