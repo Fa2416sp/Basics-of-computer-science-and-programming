@@ -7,16 +7,6 @@
 - В каталоге `inf/task2` создайте файл `fixes.log` для ведения журнала исправлений.
 - Создайте файл `main.c` с содержимым, которое вы предоставили.
 ```C
-/**
- * floor.c -- программа для расчета нужного этажа
- *
- * Copyright (c) 2022, First Last <student@cs.petrsu.ru>
- *
- * This code is licensed under MIT license.
- */
-
-#include <stdio.h>
-
 int main()
 {
     // Номер квартиры
@@ -43,10 +33,16 @@ int main()
 - Создайте файл `Makefile` в каталоге `inf/task2`:
 ```Makefile
 main: main.o
-	gcc -o main main.o
+        gcc -o main main.o
 
 main.o: main.c
-	gcc -g -O0 -c -Wall -Wextra main.c
+        gcc -g -O0 -c -Wall -Wextra main.c
+
+clean:
+        rm task1 *.o
+
+indent:
+        indent -kr -nut main.c
 ```
 ### **3 Сборка программы:**
 - В каталоге `inf/task2` выполните команду `make`.
