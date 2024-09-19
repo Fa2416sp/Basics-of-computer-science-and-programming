@@ -1,7 +1,7 @@
 /**
  * main.c -- программа "Hello, students!"
  *
- * Copyright (c) 2022, alex <alex-tabota@yandex.ru>
+ * Copyright (c) 2024, alex <alex-tabota@yandex.ru>
  *
  * This code is licensed under MIT license.
  */
