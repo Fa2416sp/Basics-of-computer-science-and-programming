@@ -1,7 +1,7 @@
 /**
  * floor.c -- программа для расчета нужного этажа
  *
- * Copyright (c) 2022, First Last <student@cs.petrsu.ru>
+ * Copyright (c) 2022, alex <alex-tabota@yandex.ru>
  *
  * This code is licensed under MIT license.
  */
