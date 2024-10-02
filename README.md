@@ -16,3 +16,4 @@
 - [X] 5. [Калькулятор рациональных дробей](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task5/task5.md)
 - [X] 6. [Англо-русский словарь](https://github.com/Fa2416sp/Basics-of-computer-science-and-programming/blob/main/inf/task6/task6.md)
 - [ ] 7. Прототип компьютерной игры
+  начал делать но пока дикое желание всё переписать с 0
