@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -g
 
 all: lychrel
 
@@ -11,3 +11,7 @@ lychrel.o: lychrel.c
 
 clean:
 	rm -f lychrel lychrel.o
+
+indent:
+	indent -kr -nut lychrel.c
+
