@@ -123,18 +123,21 @@ vim Makefile
 - Вставьте в файл следующий код для сборки программы:
 ```Makefile
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -g
 
 all: lychrel
 
 lychrel: lychrel.o
-    $(CC) $(CFLAGS) -o lychrel lychrel.o
+        $(CC) $(CFLAGS) -o lychrel lychrel.o
 
 lychrel.o: lychrel.c
-    $(CC) $(CFLAGS) -c lychrel.c
+        $(CC) $(CFLAGS) -c lychrel.c
 
 clean:
-    rm -f lychrel lychrel.o
+        rm -f lychrel lychrel.o
+
+indent:
+        indent -kr -nut lychrel.c
 ```
 - Сохраните файл и закройте текстовый редактор.
 #### 3 Сборка и запуск программы
