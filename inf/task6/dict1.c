@@ -5,44 +5,42 @@
 
 #define MAXLINE 1023
 
-void show_entries(const char *pattern, FILE *stream);
-
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     if (argc != 2) {
         fprintf(stderr, "Неправильное число аргументов.\nИспользование: %s файл_словаря\n", argv[0]);
         return EXIT_FAILURE;
     }
 
-    FILE *dict = fopen(argv[1], "r");
+    FILE* dict = fopen(argv[1], "r");
     if (!dict) {
-        perror("Ошибка открытия файла");
+        perror("Ошибка открытия файла словаря");
         return EXIT_FAILURE;
     }
 
-    char pattern[MAXLINE + 1];
-    printf("Введите шаблон для поиска: ");
-    if (scanf("%1023s", pattern) != 1) {
-        fprintf(stderr, "Ошибка ввода шаблона\n");
+    char current_line[MAXLINE + 1] = "";    
+    int requested_entry_number;
+    int current_entry_number = 0;
+
+    if (scanf("%d", &requested_entry_number) != 1) {
+        fprintf(stderr, "Ошибка ввода номера статьи.\n");
         fclose(dict);
         return EXIT_FAILURE;
     }
 
-    show_entries(pattern, dict);
-
-    fclose(dict);
-    return EXIT_SUCCESS;
-}
-
-void show_entries(const char *pattern, FILE *stream) {
-    char current_line[MAXLINE + 1];
     int matched_entry = 0;
 
-    while (fgets(current_line, MAXLINE, stream) != NULL) {
+    while (fgets(current_line, MAXLINE, dict) != NULL) {
         if (!isspace(current_line[0])) {
-            matched_entry = (strstr(current_line, pattern) != NULL);
+            current_entry_number++;
+            matched_entry = (current_entry_number == requested_entry_number);
         }
+
         if (matched_entry) {
             printf("%s", current_line);
         }
     }
+
+    fclose(dict);
+    return EXIT_SUCCESS;
 }

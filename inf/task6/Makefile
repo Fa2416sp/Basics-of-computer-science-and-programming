@@ -1,24 +1,10 @@
-# Makefile для сборки программы dict1
+all: dict1 dict2
 
-# Компилятор
-CC = gcc
+dict1: dict1.c
+	gcc -o dict1 dict1.c
 
-# Флаги компилятора
-CFLAGS = -Wall -Wextra -std=c99
+dict2: dict2.c
+	gcc -o dict2 dict2.c
 
-# Имя исполняемого файла
-TARGET = dict1
-
-# Исходные файлы
-SRCS = dict1.c
-
-# Правило по умолчанию
-all: $(TARGET)
-
-# Правило сборки исполняемого файла
-$(TARGET): $(SRCS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
-
-# Правило очистки
 clean:
-	rm -f $(TARGET)
+	rm -f dict1 dict2
