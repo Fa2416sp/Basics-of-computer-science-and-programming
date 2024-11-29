@@ -1,6 +1,6 @@
 #include "rational.h"
-#include "rat_math.c"
-#include "rat_io.c"
+#include "rat_math.h"
+#include "rat_io.h"
 #include <stdio.h>
 #include <string.h>
 
