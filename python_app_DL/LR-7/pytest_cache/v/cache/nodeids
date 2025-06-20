@@ -1,0 +1,17 @@
+[
+  "test_main.py::test_calculate_statistics",
+  "test_main.py::test_calculate_statistics_empty_chunk",
+  "test_main.py::test_calculate_statistics_floating_point",
+  "test_main.py::test_calculate_statistics_negative_values",
+  "test_main.py::test_calculate_statistics_single_value",
+  "test_main.py::test_read_data_from_file_invalid_format",
+  "test_main.py::test_read_data_from_file_invalid_type",
+  "test_main.py::test_read_data_from_file_missing_column",
+  "test_main.py::test_read_data_from_file_no_permission",
+  "test_main.py::test_read_data_from_file_nonexistent",
+  "test_main.py::test_read_data_from_file_valid",
+  "test_main.py::test_split_data_correct_intervals",
+  "test_main.py::test_split_data_edge_intervals",
+  "test_main.py::test_split_data_empty_input",
+  "test_main.py::test_split_data_single_interval"
+]
