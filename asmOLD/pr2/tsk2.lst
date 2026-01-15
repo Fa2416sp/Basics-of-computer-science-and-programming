@@ -1,0 +1,46 @@
+GAS LISTING tsk2.S 			page 1
+
+
+   1              	.include "my-macro"    # подключение файла с макроопределениями
+   1              	/* Макроопределение завершения работы */
+   2              	
+   3              	.macro Finish
+   4              	    movl $0, %ebx # first argument: exit code
+   5              	    movl $1, %eax # sys_exit index
+   6              	    int $0x80 # kernel interrupt
+   7              	.endm
+   2              	
+   3              	.text
+   4              	
+   5              	.global _start
+   6              	_start:
+   7 0000 B8050000 	    movl $5, %eax      # число, факториал которого будем считать
+   7      00
+   8 0005 BB010000 	    movl $1, %ebx      # сюда записываем результат
+   8      00
+   9              	
+  10              	L1:                    # если не закончили выполнение
+  11 000a 83F800   	    cmpl  $0, %eax     # сравнение c нулем
+  12 000d 7406     	    je L2              # выходим из цикла, если работа завершена
+  13              	
+  14 000f 0FAFD8   	    imull %eax, %ebx   # умножаем результат на текущее число
+  15 0012 48       	    decl  %eax         # уменьшаем текущее число на 1
+  16 0013 EBF5     	    jmp   L1           # продолжаем выполнение в цикле, елси рабо
+  17              	
+  18              	L2:
+  19              	        Finish         # макрос выхода
+  19 0015 BB000000 	>  movl $0,%ebx
+  19      00
+  19 001a B8010000 	>  movl $1,%eax
+  19      00
+  19 001f CD80     	>  int $0x80
+  20              	.end
+GAS LISTING tsk2.S 			page 2
+
+
+DEFINED SYMBOLS
+              tsk2.S:6      .text:0000000000000000 _start
+              tsk2.S:10     .text:000000000000000a L1
+              tsk2.S:18     .text:0000000000000015 L2
+
+NO UNDEFINED SYMBOLS
